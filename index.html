@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Roche-Posay</title>
+  <style>
+    @font-face {
+      font-family: 'LocatorWeb';
+      src: url("fonts/LocatorWebLight/LocatorWebLight.eot");
+      src: url("fonts/LocatorWebLight/LocatorWebLight.eot?#iefix") format("embedded-opentype"), url("fonts/LocatorWebLight/LocatorWebLight.woff2") format("woff2"), url("fonts/LocatorWebLight/LocatorWebLight.woff") format("woff");
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    /* Locator Web Medium */
+    @font-face {
+      font-family: 'LocatorWeb';
+      src: url("fonts/LocatorWebMedium/LocatorWebMedium.eot");
+      src: url("fonts/LocatorWebMedium/LocatorWebMedium.eot?#iefix") format("embedded-opentype"), url("fonts/LocatorWebMedium/LocatorWebMedium.woff2") format("woff2"), url("fonts/LocatorWebMedium/LocatorWebMedium.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #es-effaclar.es-effaclar {
+      font-family: "LocatorWeb", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1.2;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0;
+      overflow: hidden;
+      color: #000;
+      background: #fff;
+    }
+
+    #es-effaclar.es-effaclar h2,
+    #es-effaclar.es-effaclar h3,
+    #es-effaclar.es-effaclar h4,
+    #es-effaclar.es-effaclar h5 {
+      font-family: "LocatorWeb", Tahoma, Geneva, Verdana, sans-serif;
+      color: #000;
+    }
+
+    #es-effaclar.es-effaclar * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    #es-effaclar.es-effaclar .es-kv {
+      margin-bottom: 68px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__wrapper {
+      background: url("assets/img/kv-mb.png") center no-repeat;
+      background-size: cover;
+      position: relative;
+      min-height: 776px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__badge {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      position: absolute;
+      top: 94%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    #es-effaclar.es-effaclar .es-kv__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding: 0 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__logo {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-right: 16px;
+      margin-bottom: 28px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--packshot {
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+      margin-left: 92px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--desktop {
+      display: none;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--badge {
+      -webkit-box-flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--stamp {
+      margin-left: 0;
+      width: 60px;
+      margin-right: 0;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__cap {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin: 0;
+      line-height: inherit;
+      color: inherit;
+      font-size: 16px;
+      text-align: right;
+      font-weight: 200;
+      padding: 16px 0;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__packshot {
+      padding: 16px 0;
+      opacity: 1;
+      position: relative;
+      z-index: 3;
+      display: none;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__packshot:hover .es-kv__img-packshot {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    #es-effaclar.es-effaclar .es-kv__content {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding:  0 50px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__photo {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__title {
+      margin: 0;
+      line-height: inherit;
+      color: inherit;
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: 200;
+      padding: 16px;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__title span {
+      color: #ffffff font-size 18px;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__orange {
+      margin: 0;
+      line-height: inherit;
+      padding: 6px;
+      text-align: right;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 400;
+      background-color: #f07d00;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      padding: 0 16px;
+      min-width: 265px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__subtitle {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      color: #f08700 text-transform uppercase;
+      font-weight: 400;
+      font-size: 12px;
+      padding-left: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp-text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 12px;
+      padding-left: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp-text span {
+      font-weight: 400;
+    }
+
+    #es-effaclar.es-effaclar .es-footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 62px;
+    }
+
+    #es-effaclar.es-effaclar .es-serum {
+      padding: 16px;
+      margin-bottom: 32px;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__title {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      font-size: 28px;
+      font-weight: 200;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__subtitle {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      font-size: 12px;
+      font-weight: 200;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 16px 16px;
+      margin: 0 auto;
+      margin-top: 32px;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__feature {
+      width: 220px;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__feature:hover .es-serum__icon {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    #es-effaclar.es-effaclar .es-serum__icon {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__text {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      -webkit-box-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 400;
+      margin: 16px 0;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-res {
+      margin-bottom: 40px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__wrapper {
+      background: url("assets/img/info.png") center no-repeat;
+      background-size: cover;
+      padding: 32px 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__title {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: 27px;
+      font-weight: 500;
+      max-width: 100%;
+      margin-bottom: 26px;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-res__title span {
+      font-weight: 300;
+    }
+
+    #es-effaclar.es-effaclar .es-res__container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      align-items: center;
+      max-width: 560px;
+      margin: 0 auto;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__single {
+      width: 150px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__percent {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 40px;
+      color: #eb8504;
+      text-align: center;
+      line-height: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-res__percent sup {
+      font-size: 24px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__percent small {
+      font-size: 11px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: 12px;
+      text-align: center;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #fff;
+      max-width: 150px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__text--small {
+      color: #7a7a7a;
+      font-size: 10px;
+      text-transform: none;
+      margin-top: 12px;
+      font-weight: 300;
+      max-width: 100%;
+    }
+
+    #es-effaclar.es-effaclar .es-res__disc {
+      margin: 0;
+      line-height: inherit;
+      color: inherit;
+      font-size: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-res__disclaimer {
+      margin: 0;
+      line-height: inherit;
+      color: inherit;
+      padding: 24px 16px 0 16px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients {
+      margin: 0 auto;
+      padding: 0 16px;
+      margin-bottom: 40px;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__title {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 28px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container .es-ingredients__single {
+      opacity: 1;
+      max-width: 175px;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container:hover .es-ingredients__single {
+      opacity: 0.5;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container .es-ingredients__single:hover {
+      opacity: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 0px 10px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__single {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      max-width: 225px;
+      opacity: 1;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__image {
+      position: relative;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__label {
+      margin: 0;
+      color: inherit;
+      font-size: 20px;
+      padding: 10px 8px;
+      background: rgba(255, 255, 255, 0.66);
+      position: absolute;
+      top: 24px;
+      left: 0;
+      font-weight: 600;
+      text-align: left;
+      text-transform: uppercase;
+      width: 164px;
+      height: 85px;
+      line-height: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__label span {
+      font-weight: 200;
+      font-size: 16px;
+      letter-spacing: -1px;
+      position: relative;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      padding-top: 16px;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    #es-effaclar.es-effaclar .es-use {
+      margin-bottom: 56px;
+    }
+
+    #es-effaclar.es-effaclar .es-use__wrapper {
+      background: #f08700;
+      padding: 24px 16px;
+      min-height: 257px;
+    }
+
+    #es-effaclar.es-effaclar .es-use__title {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      color: #fff;
+      font-size: 27px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    #es-effaclar.es-effaclar .es-use__item {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-use__text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 200;
+      margin-bottom: 16px;
+    }
+    #es-effaclar.es-effaclar .es-routine__title {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 16px;
+      font-weight: 200;
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    #es-effaclar.es-effaclar .es-routine__img {
+      display: none;
+    }
+    #es-effaclar.es-effaclar .es-routine__container {
+      padding: 16px;
+    }
+    #es-effaclar.es-effaclar .es-routine__single {
+      margin-bottom: 64px;
+    }
+    #es-effaclar.es-effaclar .es-routine__number {
+      color: #01afec;
+      font-weight: 400;
+      font-size: 156px;
+      margin: 0;
+      padding: 0;
+      line-height: 0.75;
+    }
+    #es-effaclar.es-effaclar .es-routine__subtitle {
+      margin: 12px 0;
+      font-size: 20px;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+    }
+    #es-effaclar.es-effaclar .es-routine__subtitle span {
+      margin: 12px 0;
+      font-size: 20px;
+      font-weight: 700; 
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+    }
+    #es-effaclar.es-effaclar .es-routine__subtitle strong {
+      display: block;
+      font-size: 24px;
+    }
+    #es-effaclar.es-effaclar .es-routine__text {
+      margin-bottom: 24px;
+      font-size: 15px;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+    }
+    #es-effaclar.es-effaclar .es-routine__link {
+      border: 1px solid #01afec;
+      padding: 4px 16px;
+      color: #fff;
+      font-size: 15px;
+      margin: 0;
+      line-height: inherit;
+      text-decoration: none;
+      background: #01afec;
+      transition: all 0.3s ease;
+    }
+    #es-effaclar.es-effaclar .es-routine__link:hover {
+      color: #01afec;
+      background: #fff;
+    }
+    #es-effaclar.es-effaclar .es-routine__packshot {
+      padding-left: 100px;
+    }
+    #es-effaclar.es-effaclar .es-routine__img-packshot {
+      margin: 0 auto;
+      margin-bottom: -100px;
+      display: block;
+      max-width: 100%;
+      max-height: 400px;
+    }
+    #es-effaclar.es-effaclar .es-terms {
+      margin-bottom: 32px;
+      padding: 16px;
+    }
+    #es-effaclar.es-effaclar .es-terms__title {
+      margin-bottom: 40px;
+      font-weight: 200;
+      font-size: 28px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    #es-effaclar.es-effaclar .es-terms__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    #es-effaclar.es-effaclar .es-terms__term {
+      margin: 8px;
+      display: flex;
+      align-items: flex-end;
+      min-height: 160px;
+      flex: 1;
+      flex-basis: 100%;
+      max-width: 340px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #es-effaclar.es-effaclar .es-terms__term--1 {
+      background: url("assets/img/term-1.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+    #es-effaclar.es-effaclar .es-terms__term--2 {
+      background: url("assets/img/term-2.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+    #es-effaclar.es-effaclar .es-terms__term--3 {
+      background: url("assets/img/term-3.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+    #es-effaclar.es-effaclar .es-terms__term--4 {
+      background: url("assets/img/term-4.png");
+
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+    #es-effaclar.es-effaclar .es-terms__text {
+      margin-top: 16px;
+      padding: 10px 0 0 10px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-disclaimer {
+      margin-bottom: 32px;
+    }
+
+    #es-effaclar.es-effaclar .es-disclaimer__text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      font-size: 11px;
+    }
+
+    @media screen and (min-width: 565px) {
+      #es-effaclar.es-effaclar .es-res__container {
+        flex-direction: row;
+      }
+    }
+
+    @media screen and (min-width: 740px) {
+      #es-effaclar.es-effaclar .es-kv__wrapper {
+        background: url("assets/img/kv.png") center no-repeat;
+        background-size: cover;
+        position: relative;
+        min-height: 420px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__header {
+        max-width: 660px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        padding: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__content {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 50%;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__title {
+        padding-right: 58px;
+        font-size: 26px;
+        text-align: right;
+        line-height: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__title span {
+        font-size: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img {
+        margin-left: 0;
+        max-width: 80%;
+        display: block;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--packshot {
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+        margin-left: 92px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--desktop {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--badge {
+        padding: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--stamp {
+        margin-left: 0;
+        width: 60px;
+        margin-right: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__orange {
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+        padding: 6px;
+        text-align: right;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 400;
+        background-color: #f07d00;
+        margin-right: 58px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__photo {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        max-width: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__badge {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp {
+        padding: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__packshot {
+        position: absolute;
+        top: 25%;
+        left: 55%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        margin-top: 44px;
+        display: block;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--packshot {
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+        margin-left: 6px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--mobile {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--desktop {
+        display: block;
+        max-width: 110%;
+        position: relative;
+        z-index: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--badge {
+        top: 96px;
+        left: 20px;
+        position: absolute;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--first {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp {
+        padding-right: 60px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__subtitle {
+        text-align: right;
+        padding-right: 16px;
+        padding-left: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-res {
+        margin-bottom: 64px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__single {
+        width: 126px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-size: 27px;
+        font-weight: 500;
+        max-width: 440px;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__title span {
+        font-weight: 300;
+      }
+
+      #es-effaclar.es-effaclar .es-res__wrapper {
+        background: url("assets/img/info.png") no-repeat;
+        background-size: cover;
+        padding-right: 60px;
+        padding-top: 72px;
+        height: 362px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      }
+
+      #es-effaclar.es-effaclar .es-res__container {
+        flex-direction: row;
+        gap: 32px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__disclaimer {
+        max-width: 607px;
+        margin: 0 auto;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients {
+        padding: 0;
+        margin-bottom: 32px;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      #es-effaclar.es-effaclar .es-use__title {
+        font-size: 32px;
+        padding: 0;
+        font-weight: 400;
+      }
+
+      #es-effaclar.es-effaclar .es-use__wrapper {
+        background: url("assets/img/banner.png") no-repeat center right;
+        background-size: cover;
+        height: 346px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      #es-effaclar.es-effaclar .es-use__content {
+        padding-left: 54px;
+        padding-right: 288px;
+      }
+
+      #es-effaclar.es-effaclar .es-use__list {
+        padding-left: 16px;
+        margin-bottom: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-use__item:last-child {
+        margin-bottom: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-use__text {
+        max-width: 426px;
+      }
+
+      #es-effaclar.es-effaclar .es-use__text:last-child {
+        margin-bottom: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-routine {
+        margin-bottom: 40px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__img {
+        display: block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        max-width: 80%;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__container {
+        margin-top: 48px;
+        padding: 0;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single {
+        position: absolute;
+        max-width: 225px;
+        margin-bottom: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--1 {
+        top: -20px;
+        right: 600px;
+        padding-left: 29px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--2 {
+        top: 30%;
+        left: 590px;
+        padding-right: 29px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--3 {
+        top: 55%;
+        right: 600px;
+        padding-left: 29px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__packshot {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-terms {
+        padding: 30px 0;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+        flex-flow: row;
+        margin: 4px -4px;
+        gap: 0px;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__term {
+        margin-bottom: 0;
+        max-width: 348px;
+        min-height: 162px;
+      }
+
+      #es-effaclar.es-effaclar .es-footer {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 62px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="es-effaclar" id="es-effaclar">
+    <div class="es-kv">
+      <div class="es-kv__wrapper">
+        <div class="es-kv__header">
+          <div class="es-kv__logo">
+            <img src="assets/img/logo.png" alt="" class="es-kv__img es-kv__img--logo" />
+          </div>
+        </div>
+        <div class="es-kv__container">
+          <div class="es-kv__content">
+            <h2 class="es-kv__orange">
+              INOVACIJA APSAUGOS NUO SAULĖS SRITYJE
+            </h2>
+            <h2 class="es-kv__title">
+              <strong>VEIKSMINGIAUSIAS<br /> UV FILTRAS<br></strong>
+              <span>APSAUGANTIS NUO<br /> KENKSMINGIAUSIŲ UV SPINDULIŲ</span>
+            </h2>
+          </div>
+          <div class="es-kv__packshot">
+            <img src="assets/img/packshot.png" alt="" class="es-kv__img es-kv__img-packshot" />
+          </div>
+          <div class="es-kv__photo">
+          </div>
+        </div>
+        <div class="es-kv__badge">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="es-serum">
+      <h3 class="es-serum__title"><strong> Anthelios UV</strong>MUNE<strong>400</strong><br>
+        NEMATOMAS FLUIDAS SPF50+</h3>
+      <div class="es-serum__container">
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img" />
+          </div>
+          <p class="es-serum__text">
+            SPF50+<br>
+            ITIN STIPRI APSAUGA
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img" />
+          </div>
+          <p class="es-serum__text">
+            PLATUS APSAUGINIO<br /> POVEIKIO NUO UVA/UVB<br /> SPINDULIŲ SPEKTRAS
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img" />
+          </div>
+          <p class="es-serum__text">
+            APSAUGA NUO GILAUS<br /> LĄSTELIŲ PAŽEIDIMO
+          </p>
+        </div>
+      </div>
+      <div class="es-serum__container">
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img" />
+          </div>
+          <p class="es-serum__text">
+            NEMATOMAS ANT ODOS,<br /> LENGVOS, NERIEBIOS<br /> TEKSTŪROS
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img" />
+          </div>
+          <p class="es-serum__text">
+            LABAI ATSPARUS<br /> VANDENIUI<br />
+            IR PRAKAITUI
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img" />
+          </div>
+          <p class="es-serum__text">
+            NEGRAUŽIA AKIŲ
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-res">
+      <div class="es-res__wrapper">
+        <div class="es-res__content">
+          <h3 class="es-res__title">
+            <strong> VEIKSMINGUMO IR GERO</strong>
+            TOLERAVIMO&nbsp;GARANTIJA
+          </h3>
+          <div class="es-res__container">
+            <div class="es-res__single">
+              <p class="es-res__percent"><small>PASAK</small> 99<sup>%</sup></p>
+              <p class="es-res__text">
+                TYRIMO DALYVIŲ SUTEIKIA ODAI KOMFORTO POJŪTĮ<sup>1</sup>
+              </p>
+            </div>
+            <div class="es-res__single">
+              <p class="es-res__percent"><small>PASAK</small> 97<sup>%</sup></p>
+              <p class="es-res__text">
+                TYRIMO DALYVIŲ ODA TAPO PASTEBIMAI SUDRĖKINTA<sup>2</sup>
+              </p>
+            </div>
+          </div>
+          <div class="es-res__container">
+            <div class="es-res__single">
+              <p class="es-res__percent"><small>PASAK</small> 98<sup>%</sup></p>
+              <p class="es-res__text">
+                TYRIMO DALYVIŲ SUTEIKIA MATINĮ EFEKTĄ<sup>2</sup>
+              </p>
+            </div>
+            <div class="es-res__single">
+              <p class="es-res__percent"><small>PASAK</small>99<sup>%</sup></p>
+              <p class="es-res__text">
+                TYRIMO DALYVIŲ GREITAI SUSIGERIA<sup>2</sup>
+              </p>
+            </div>
+            <div class="es-res__single">
+              <p class="es-res__percent"><small>PASAK</small> 97<sup>%</sup></p>
+              <p class="es-res__text">
+                TYRIMO DALYVIŲ NEPALIEKA BALTŲ PĖDSAKŲ<sup>2</sup>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="es-res__text es-res__text--small">
+        1Klinikinis tyrimas, 113 dalyvių, iš karto po naudojimo</br>
+        2Klininis tyrimas, 113 dalyvių, 14 dienų po naudojimo
+      </p>
+    </div>
+
+    <div class="es-ingredients">
+      <h3 class="es-ingredients__title">VEIKLIOSIOS MEDŽIAGOS</h3>
+      <div class="es-ingredients__container">
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-1.png" alt="" class="es-ingredients__img" />
+            <p class="es-ingredients__label"> MEXORYL 400</p>
+          </div>
+          <p class="es-ingredients__text">
+            Inovatyvus ir patentuotas <strong>labai veiksmingas UV filtras</strong>, saugantis nuo kenksmingiausių UV
+            spindulių (itin ilgų iki 400 nm UVA spindulių poveikis).
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-2.png" alt="" class="es-ingredients__img" />
+            <p class="es-ingredients__label">NETLOCK<br />
+              TECHNOLOGIJA</p>
+          </div>
+          <p class="es-ingredients__text">
+            Itin stipri nematomos tekstūros suteikiama apsauga. Sukuria vienalytį ir patvarų apsauginį „tinklelį“ ant
+            odos.
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-3.png" alt="" class="es-ingredients__img" />
+            <p class="es-ingredients__label">
+              GLICERINAS
+            </p>
+          </div>
+          <p class="es-ingredients__text">
+            Padeda drėkinti, maitinti<br />
+            ir stiprinti odos apsauginį barjerą.
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-4.png" alt="" class="es-ingredients__img" />
+            <p class="es-ingredients__label">
+              <span>Z LA ROCHE-POSAY</span><br />TERMINIS
+              VANDUO
+            </p>
+          </div>
+          <p class="es-ingredients__text">
+            Ramina, švelnina ir sumažina odos jautrumą.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-use">
+      <div class="es-use__wrapper">
+        <div class="es-use__content">
+          <h3 class="es-use__title">
+            NAUDOJIMO BŪDAS
+          </h3>
+          <ol class="es-use__list">
+            <li class="es-use__item">
+              <p class="es-use__text">
+                Prieš naudojimą suplakite. Užtepkite priemonę ant odos prie išeinant į saulę.
+              </p>
+            </li>
+            <li class="es-use__item">
+              <p class="es-use__text">
+                Naudokite gausiai ir dažnai tepkite pakartotinai, kad būtų išlaikyta atitinkamo lygio apsauga, ypač po
+                maudynių, suprakaitavus ar nusišluosčius rankšluosčiu.
+              </p>
+            </li>
+            <li class="es-use__item">
+              <p class="es-use__text">
+                Venkite patekimo į akis. Patekus į akis, jas reikia nedelsiant praplauti vandeniu.
+              </p>
+            </li>
+            <li class="es-use__item">
+              <p class="es-use__text">
+                Naudokite UV filtrą visus metus.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-routine">
+      <h3 class="es-routine__title"> <strong>anthelios</strong> rutina</h3>
+      <div class="es-routine__container">
+        <img src="assets/img/bg2.png" alt="" class="es-routine__img" />
+        <div class="es-routine__single es-routine__single--1">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-1.png" alt="" class="es-routine__img-packshot" />
+          </div>
+          <p class="es-routine__number">1</p>
+          <p class="es-routine__subtitle">
+            MICELINIS VANDUO
+            <strong>ultra</strong>
+          </p>
+          <p class="es-routine__text">
+            Labai jautriai ir sudirgusiai odai. Nuvalo nuo odos makiažą ir nešvarumus.
+            Be to, jis drėkina odą
+            ir sumažina tempimo
+            pojūtį bei paraudimą.
+          </p>
+          <a href="https://www.benu.lt/grozio-ir-odos-prieziura/veido-odos-prieziura/veido-valymo-priemones/la-roche-posay-micelinis-vanduo-jautriai-odai-sensitive-400-ml"
+            target="_blank" class="es-routine__link">TUTVU</a>
+        </div>
+        <div class="es-routine__single es-routine__single--2">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-2.png" alt="" class="es-routine__img-packshot" />
+          </div>
+          <p class="es-routine__number">2</p>
+          <p class="es-routine__subtitle">
+            <strong>Hyalu B5</strong> serumas
+          </p>
+          <p class="es-routine__text">
+            Koncentruotas serumas nuo raukšlių, sudėtyje esantis dviejų hialurono rūgšties tipų ir vitamino B5 derinys
+            pastebimai atnaujina jautrią odą ir sustiprina jos stangrumą. Drėkina, regeneruoja ir atstato jautrios odos
+            apsauginį barjerą.
+          </p>
+          <a href="https://www.benu.lt/grozio-ir-odos-prieziura/veido-odos-prieziura/la-roche-posay-serumas-nuo-rauksliu-su-hialuronu-hyalu-b5-30-ml"
+            target="_blank" class="es-routine__link">TUTVU</a>
+        </div>
+        <div class="es-routine__single es-routine__single--3">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-3.png" alt="" class="es-routine__img-packshot" />
+          </div>
+          <p class="es-routine__number">3</p>
+          <p class="es-routine__subtitle">
+            <span>anthelios</span><br />UVMUNE&nbsp;<span>400</span><br /> fluidas
+          </p>
+          <p class="es-routine__text">
+            Lengvas, ant odos nematomas fluidas su itin stipria SPF50+ apsauga. Platus apsauginio poveikio nuo UVA/UVB
+            spindulių spektras. Jautriai ir į saulę reaguojančiai odai.
+          </p>
+          <a href="https://www.benu.lt/odos-prieziura-ir-kosmetika/apsauga-nuo-saules/apsauga-nuo-saules/la-roche-posay-fluidas-anthelios-uvmune-400-oil-control-spf50-50-ml"
+            target="_blank" class="es-routine__link">TUTVU
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-terms">
+      <h3 class="es-terms__title">
+        <strong>la roche-posay</strong> ĮSIPAREIGOJIMAI
+      </h3>
+      <div class="es-terms__container">
+        <div class="es-terms__term es-terms__term--1">
+          <p class="es-terms__text es-terms__text--white">
+            100 % DĖL ALERGIJŲ<br />
+            TESTUOTI PRODUKTAI
+          </p>
+        </div>
+        <div class="es-terms__term es-terms__term--2">
+          <p class="es-terms__text">
+            TIK SVARBIAUSIOS AKTYVIOSIOS SUDEDAMOSIOS<br />
+            DALYS OPTIMALIOMIS KONCENTRACIJOMIS
+          </p>
+        </div>
+      </div>
+      <div class="es-terms__container">
+        <div class="es-terms__term es-terms__term--3">
+          <p class="es-terms__text">
+            FORMULĖS, KOVOJANČIOS<br />
+            SU SENĖJIMO POŽYMIAIS
+          </p>
+        </div>
+        <div class="es-terms__term es-terms__term--4">
+          <p class="es-terms__text es-terms__text--white">
+            IŠBANDYTA ANT YPAČ<br />
+            JAUTRIOS ODOS
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
